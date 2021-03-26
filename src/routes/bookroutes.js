@@ -22,7 +22,7 @@ var books = [
   ];
   booksrouter.get('/',function(req,res){
     res.render("books",{
-      nav:[{link:'/books',name:'Books'},{link:'/authors',name:'Authors'},{link:'/login',name:'Login'},{link:'/signup',name:'Signup'}],
+      nav:[{link:'/books',name:'Books'},{link:'/authors',name:'Authors'},{link:'/login',name:'Login'},{link:'/signup',name:'Signup'},{link:'/new book',name:'New Book'},{link:'/new author',name:'New Author'}],
       title:'Library',
       books
     });
