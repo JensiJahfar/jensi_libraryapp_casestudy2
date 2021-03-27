@@ -116,7 +116,7 @@
           </head>
           <body>
           <div class="login-form">
-              <form action="./src/routes/bookroutes.js " method="post">
+              <form action="./login.ejs" method="post">
                   <h2 class="text-center">Log in</h2>       
                   <div class="form-group">
                       <input type="text" class="form-control" placeholder="Username"  pattern="^([A-Za-z0-9\.-]+)@([A-Za-z0-9\-]+).([a-z]{2,3})(.[a-z]{2,3}?)$" title="Must be in proper email format" required="required">
@@ -129,7 +129,7 @@
                   </div>
                   <div class="clearfix">
                       <label class="pull-left checkbox-inline"><input type="checkbox"> Remember me</label>
-                      <a href="./signup.ejs" class="pull-right">Forgot Password?</a>
+                      <a href="./login.ejs" class="pull-right">Forgot Password?</a>
                   </div>        
               </form>
               
@@ -194,5 +194,6 @@
 	<!-- script references -->
 		<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.2/jquery.min.js"></script>
 		<script src="js/bootstrap.min.js"></script>
+    <script src="/public/js/form.js"></script>
 	</body>
 </html>

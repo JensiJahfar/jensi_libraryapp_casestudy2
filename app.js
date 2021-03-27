@@ -7,6 +7,8 @@ const booksrouter = require('./src/routes/bookroutes');
 const authorsrouter = require('./src/routes/authorroutes');
 const loginrouter = require('./src/routes/loginroutes');
 const signuprouter = require('./src/routes/signuproutes');
+const addbookrouter = require('./src/routes/addbookroute');
+const addauthorrouter = require('./src/routes/addauthorroute');
 
 app.use(express.static('./public'));
 
@@ -16,6 +18,10 @@ app.use('/books',booksrouter);
 app.use('/authors',authorsrouter);
 app.use('/login',loginrouter);
 app.use('/signup',signuprouter);
+app.use('/addauthor',addauthorrouter);
+app.use('/addbook',addbookrouter);
+
+
 app.get('/',function(req,res){
     res.render("index",
     {
