@@ -28,11 +28,11 @@ var Authors = [
       img : 'perry.jpg',
       Profile : 'Anne Perry (born Juliet Marion Hulme; 28 October 1938) is an English author of historical detective fiction, best known for her Thomas Pitt and William Monk series. In 1954, at the age of fifteen, she was convicted in the murder of her friends mother. She changed her name after serving a five-year sentence.'
     }
-  ]
+  ];
   
   authorsrouter.get('/',function(req,res){
     res.render("authors",{
-      nav:[{link:'/books',name:'Books'},{link:'/authors',name:'Authors'},{link:'/login',name:'Login'},{link:'/signup',name:'Signup'},{link:'/new book',name:'New Book'},{link:'/new author',name:'New Author'}],
+      nav:[{link:'/books',name:'Books'},{link:'/authors',name:'Authors'},{link:'/login',name:'Login'},{link:'/signup',name:'Signup'},{link:'/addauthor',name:'Add Author'}],
       title:'Library',
       Authors
     });
@@ -41,7 +41,7 @@ var Authors = [
   authorsrouter.get('/:id',function(req,res){
     const id = req.params.id;
     res.render('author',{
-      nav:[{link:'/books',name:'Books'},{link:'/authors',name:'Authors'},{link:'/login',name:'Login'},{link:'/signup',name:'Signup'},{link:'/new book',name:'New Book'},{link:'/new author',name:'New Author'}],
+      nav:[{link:'/books',name:'Books'},{link:'/authors',name:'Authors'},{link:'/login',name:'Login'},{link:'/signup',name:'Signup'},{link:'/addauthor',name:'Add Author'}],
       title:'Library',
       Author:Authors[id]
     });

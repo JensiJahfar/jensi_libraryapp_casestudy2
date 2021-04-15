@@ -8,12 +8,9 @@ loginrouter.get('/',function(req,res){
     
     });
 });
-loginrouter.get('/login',function(req,res){
-  
-  res.render('book',{
-    nav:[{link:'/books',name:'Books'},{link:'/authors',name:'Authors'},{link:'/login',name:'Login'},{link:'/signup',name:'Signup'}],
-    title:'Library',
-  })
+loginrouter.get('/submit',function(req,res){
+  res.send("Successfully Logged in");
+ 
 });
 
 

@@ -7,6 +7,9 @@ signuprouter.get('/',function(req,res){
     
     });
 });
-
+signuprouter.get('/Submit',function(req,res){
+  res.send("Successfully Signed Up");
+ 
+});
 
 module.exports = signuprouter;

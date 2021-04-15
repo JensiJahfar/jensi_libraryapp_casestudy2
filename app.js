@@ -18,8 +18,8 @@ app.use('/books',booksrouter);
 app.use('/authors',authorsrouter);
 app.use('/login',loginrouter);
 app.use('/signup',signuprouter);
-app.use('/addauthor',addauthorrouter);
 app.use('/addbook',addbookrouter);
+app.use('/addauthor',addauthorrouter);
 
 
 app.get('/',function(req,res){

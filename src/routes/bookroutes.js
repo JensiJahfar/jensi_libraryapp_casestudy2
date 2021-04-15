@@ -1,5 +1,6 @@
 const express = require("express");
 const booksrouter = express.Router();
+
 var books = [
     {
       title : 'Harry Potter',
@@ -22,7 +23,7 @@ var books = [
   ];
   booksrouter.get('/',function(req,res){
     res.render("books",{
-      nav:[{link:'/books',name:'Books'},{link:'/authors',name:'Authors'},{link:'/login',name:'Login'},{link:'/signup',name:'Signup'},{link:'/addbook',name:'New Book'},{link:'/new author',name:'New Author'}],
+      nav:[{link:'/books',name:'Books'},{link:'/authors',name:'Authors'},{link:'/login',name:'Login'},{link:'/signup',name:'Signup'},{link:'/addbook',name:'New Book'}],
       title:'Library',
       books
     });
@@ -31,7 +32,7 @@ var books = [
   booksrouter.get('/:id',function(req,res){
     const id = req.params.id;
     res.render('book',{
-      nav:[{link:'/books',name:'Books'},{link:'/authors',name:'Authors'},{link:'/login',name:'Login'},{link:'/signup',name:'Signup'}],
+      nav:[{link:'/books',name:'Books'},{link:'/authors',name:'Authors'},{link:'/login',name:'Login'},{link:'/signup',name:'Signup'},{link:'/addbook',name:'New Book'}],
       title:'Library',
       book:books[id]
     })
