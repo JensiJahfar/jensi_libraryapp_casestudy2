@@ -11,7 +11,7 @@ const addbookrouter = require('./src/routes/addbookroute');
 const addauthorrouter = require('./src/routes/addauthorroute');
 
 app.use(express.static('./public'));
-
+app.use(express.urlencoded({extended:true}));
 app.set('view engine','ejs');
 app.set('views','./src/views');
 app.use('/books',booksrouter);
